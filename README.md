@@ -42,4 +42,4 @@ To-Do
 - Visualize
   * https://seaborn.pydata.org/examples/index.html
   * https://docs.bokeh.org/en/latest/docs/gallery.html
-  * https://www.qgis.org/en/site/
+  * [QGIS](https://www.qgis.org/en/site/about/screenshots.html#screenshots)
