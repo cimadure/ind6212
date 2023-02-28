@@ -1,3 +1,5 @@
+# Limites administratives de l'agglomération de Montréal
+
 Polygones des limites administratives de la Ville de Montréal, ses arrondissements, ainsi que des villes liées de l'agglomération de Montréal.
 
 Les limites administratives sont une compilation des différentes descriptions techniques et des plans qui sont déposés dans le Greffe de l’arpenteur général du Québec. Elles sont partagées à titre informatif et sont sujettes à modifications.

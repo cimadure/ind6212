@@ -1,24 +1,18 @@
-# Transactions
+# Contrats
 
-### Dictionnaire de données
-
+### Dictionnaires de données
 
 |Variable|Définition|
 |:--- | :--- |
-|TransactionID| Identifiant unique de la transaction
-|DateChargement| Date et heure du début du chargement du camion par la souffleuse|
-|Idenfiantsecteur| Identifiant numérique du secteur de provenance de la neige (selon l'ensemble de données Secteur de déneigement). Ce champ prend la valeur NULL lorsqu'il s'agit d'un chargement de neige provenant d'un particulier ou d'un partenaire de la Ville et non des opérations de déneigement de la Ville de Montréal.|
-|NomSecteur| Nom du secteur de provenance de la neige (selon l'ensemble de données Secteur de déneigement). Ce champ prend la valeur NULL lorsqu'il s'agit d'un chargement de neige provenant d'un particulier ou d'un partenaire de la Ville et non des opérations de déneigement de la Ville de Montréal|
-|IdentifiantArrondissement| Identifiant de l'arrondissement de provenance (selon l'ensemble de données Secteur de déneigement)|
-|ArrondissementCode| Identifiant de l'arrondissement de provenance (selon l'ensemble de données Secteur de déneigement)|
-|Arrondissement| Nom de l'arrondissement de provenance (selon l'ensemble de données Secteur de déneigement)|
-|IdentifiantDepot| Identifiant unique du dépôt utilisé (selon l'ensemble de données Dépôt de neige)|
-|NomDepot| Nom du dépôt utilisé (selon l'ensemble de données Dépôt de neige)|
-|DateDéchargement| Date et heure du passage du camion à la guérite du dépôt à neige|
-|Volume| Volume de neige déposé en mètre cube, selon le volume du camion mesuré par les agents techniques de la Ville de Montréal|
-|TypeTransaction| Indicateur d'une transaction autorisée (AUT), non-autorisée (N-AUT) ou en échange d'un coupon (BARCODE) par partenaire de la Ville ou un particulier|
-IdentifiantContrat| Identifiant du contrat (selon l'ensemble Contrats de déneigement)|
-|NuméroContrat| Nom du contrat (selon l'ensemble Contrats de déneigement)|
+|IdentifiantContrat| Identifiant numérique unique du contrat|
+|NuméroContrat| Numéro du contrat, correspondant généralement au secteur de déneigement tel qu'identifié dans l'ensemble de données Secteur de déneigement (*Certains contrats inclus plus d'un secteur - la correspondance exacte entre les numéros de contrats et les secteurs se trouve dans l'ensemble des transactions de déneigement)|
+|TypeContrat| Type de contrat<br/>liste de valeur:<br/>- Déneigement: activités complètes de déblaiement, d'épandage trottoire, de chargement et de transport de la neige<br/> - Transport: activité de transport uniquement<br/> - Régie: Transport de la neige par les camions de la Ville|
+|AnneeContrat| Période couverte par le contrat|
+|IdentifiantArrondissement| Identifiant numérique unique de l'arrondissement|
+|ArrondissementCode| Code de l'arrondissement|
+|Arrondissement| Nom complet de l'arrondissement|
+|DescriptionType| Description des activités incluses dans le contrat|
+|Entreprise| Nom de l'entreprise réalisant le contrat|
 
 
 
