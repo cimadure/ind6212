@@ -1,16 +1,28 @@
 # Polytechnique Montréal - IND6212 - H23
 Data Mining School Project
 
-## Ideas
+## Problématique
+Français:  
+* Par Quartiers similaires, quelle est la meilleure stratégie à adopter?
+(si on à du temps, descendre au niveau des secteurs [nettroyage des faux contrats])
+    * nombre de trajets, unités utilisées / volume, temps, temps déneigement par fenetre temporelle de neige tombée
 
-Français:
-1. Les secteurs qui se ressemble ?
+Anglais:
+* Per similar neigorhood, what would be the best snow removal strategy?
+(if we have time, go to sector hierarchy )
+
+## Back-Up Ideas
+### Français:
+1. Dépendament du débit de chute de neige, quelle est la meilleur stratégie par quartier?
+1. Quels sont les caractéristiques des meilleurs contracteurs selection par strategie et par secteur ?
+1. Les secteurs qui se ressemblent ?
 1. Qu’est ce qui influence le volume?
 1. Les quartiers qui se ressemblent ?
 1. Nombre de strategies de déneigement ?
 
-
-Anglais:
+### Anglais:
+1. Depend on the snow 'debit' , what best strategy per neighborhoods ?
+1. What are the attributes of the best contractors per strategy per sector? 
 1. Which sectors are similar?
 1. What influences volume?
 1. Neighborhoods that look alike?
@@ -63,13 +75,13 @@ Le rapport doit faire:
 - interlignes simples
 - simple colonne
 - marges de 2cm tout autour
-- Dépôt en pdf.  
+- Dépôt en pdf  
 
 2 points en moins par jour de retard entamé.  
 4 points en moins par page supplémentaire entamée.  
 Remarque : ne rien trouver dans la base de données avec une méthode particulière est un résultat ! Il faut l’expliquer. Parfois le résultat peut être qu’il n’y a pas de relations de tel type entre tel et tel paramètres.  
 
-La base de données ET votre analyse devront être déposées avant le 27 avril à 16h.
+**La base de données ET votre analyse devront être déposées avant le 27 avril à 16h.**
  
 ### Grille
 * Nombre de pages
