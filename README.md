@@ -43,3 +43,45 @@ To-Do
   * https://seaborn.pydata.org/examples/index.html
   * https://docs.bokeh.org/en/latest/docs/gallery.html
   * [QGIS](https://www.qgis.org/en/site/about/screenshots.html#screenshots)
+
+
+
+
+## Evaluation
+Par équipe de 3, vous devez vous procurer une base de données industrielle et appliquer
+judicieusement les méthodes de fouille de données vues en classe.  
+Pour chaque fouille, vous devrez préciser : 
+ - le but recherché
+ - les transformations éventuellement nécessaires à la mise en œuvre de la méthode
+ - le réglage de différents paramètres
+ - l’analyse critique des résultats 
+
+Le rapport doit faire: 
+- 6 pages 
+- en français
+- Times new Roman, 12pt
+- interlignes simples
+- simple colonne
+- marges de 2cm tout autour
+- Dépôt en pdf.  
+
+2 points en moins par jour de retard entamé.  
+4 points en moins par page supplémentaire entamée.  
+Remarque : ne rien trouver dans la base de données avec une méthode particulière est un résultat ! Il faut l’expliquer. Parfois le résultat peut être qu’il n’y a pas de relations de tel type entre tel et tel paramètres.  
+
+La base de données ET votre analyse devront être déposées avant le 27 avril à 16h.
+ 
+### Grille
+* Nombre de pages
+* respecté format (police, langue, propreté)
+* Problématique
+* description des données (taille, format)
+* source des données
+* préparation des données
+* Choix des outils vs problématique
+* Formatage des données vs outil
+* Choix et justification des paramêtres outil
+* Analyse des résultats
+* Critique des résultats vs outils / paramètres
+* Critique des résultats vs problématique
+* Conclusion
