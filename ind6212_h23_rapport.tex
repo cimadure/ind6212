@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{blindtext}
+\usepackage{geometry}
+\usepackage{mathptmx} % Times-New Roman Like
+\usepackage{biblatex}
+
+%Set the font (output) encoding
+%--------------------------------------
+\usepackage[T1]{fontenc} %Not needed by LuaLaTeX or XeLaTeX
+
+%French-specific commands
+%--------------------------------------
+\usepackage[french]{babel}
+\usepackage[autolanguage]{numprint} % for the \nombre command
+
+%Hyphenation rules
+%--------------------------------------
+\usepackage{hyphenat}
+
+ \geometry{
+letterpaper,
+% total={170mm,257mm},
+ left=20mm, right=20mm,
+ top=20mm, bottom=20mm
+ }
+ \title{IND6212: Titre du projet}
+\author{A. B | C. D | E. F}
+\date{27 Avril 2023}
+
+
+%% Set up the bibliography
+\addbibresource{report.bib}
+
+
+\begin{document}
+\maketitle
+
+\section{Problématique}
+\blindtext[3]
+\section{Travaux existants}
+\blindtext[1]
+\section{Méthodologie}
+- source des données \\
+Je cite cette source \cite{example-article}\\
+\subsection{description des données (taille, format)}
+\subsection{préparation des données}
+
+Choix des outils vs problématique
+Formatage des données vs outil
+Choix et justification des paramêtres outil
+
+\blindtext[3]
+\section{Analyse des Resultats}
+\blindtext[6]
+\section{Discussion}
+\subsection{Critique des résultats vs outils / paramètres}
+\subsection{Critique des résultats vs problématique}
+\blindtext[3]
+\section{Conclusion}
+\blindtext[1]
+
+%% Prevent urls running into margins in bibliography
+\setcounter{biburlnumpenalty}{7000}
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{7000}
+
+%% Add bibliography
+\printbibliography[heading=bibintoc,title=References]
+
+\end{document}
+
