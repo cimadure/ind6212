@@ -1,0 +1,36 @@
+# conda env create -f environment.yml
+# conda activate ind6212
+# conda env export > environment_export.yml
+# $ conda remove --name ENVIRONMENT --all
+
+
+
+name: ind6212
+channels:
+ - conda-forge
+ - defaults
+dependencies:
+ - python=3.9.*
+ - ipykernel
+ - ipython
+ - jupyter
+ - scikit-learn>=1.2.2
+ - geopandas>=0.12
+ - graphviz
+ - seaborn
+ - tabulate
+ - contextily
+
+
+ - pyarrow
+ - osmnx
+ - pyts
+
+ - tqdm
+
+ - pyquicksetup
+ - pyquickhelper
+
+ - pip
+ - pip:
+   - -r requirements.txt

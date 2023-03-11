@@ -3,12 +3,12 @@ Data Mining School Project
 
 ## Problématique
 Français:  
-* Par Quartiers similaires, quelle est la meilleure stratégie à adopter?
+* Par Quartiers similaires, quelle est la meilleure stratégie à adopter?  
 (si on à du temps, descendre au niveau des secteurs [nettroyage des faux contrats])
     * nombre de trajets, unités utilisées / volume, temps, temps déneigement par fenetre temporelle de neige tombée
 
 Anglais:
-* Per similar neigorhood, what would be the best snow removal strategy?
+* Per similar neigorhood, what would be the best snow removal strategy?  
 (if we have time, go to sector hierarchy )
 
 ## Back-Up Ideas
@@ -36,8 +36,20 @@ Anglais:
 * [Limites administratives](data/limite_administrative/readme.md)
 * [Secteur](data/secteur/readme.md)
 
+---
 ## Setup
-To-Do
+In the Terminal, having installed Anaconda, execute the following lines.  
+Create the environment:
+> conda env create --file environment.yml  
+
+Use the environment:
+> conda activate ind6212
+
+Launch the notebook to start working:
+> jupyter notebook
+
+
+
 
 ## Knowledge
 - Geospacial
@@ -46,6 +58,7 @@ To-Do
   * https://osmnx.readthedocs.io/en/stable/osmnx.html#module-osmnx.stats
 - Scikit Learn
   * https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html
+  * AMAZING !! https://scikit-learn.org/stable/auto_examples/miscellaneous/plot_set_output.html
 - MarkDown 
   * https://www.markdownguide.org/basic-syntax/
   * https://www.w3schools.io/file/markdown-cheatsheet/
@@ -55,10 +68,16 @@ To-Do
   * https://seaborn.pydata.org/examples/index.html
   * https://docs.bokeh.org/en/latest/docs/gallery.html
   * [QGIS](https://www.qgis.org/en/site/about/screenshots.html#screenshots)
+- Anaconda
+  * Updating an environment
+``conda env update --prefix ./env --file environment.yml  --prune``
+  * Generate environment independent of the operating system
+``conda env export --name ind6212 --from-history --file environment_gen.yml``
+  * Rebuilding a Conda environment from scratch ``conda env create --file environment.yml --force``
+  * Remove environment: ``conda env remove --name ind6212``
+  * List environments: ``conda info --envs``  
 
-
-
-
+---
 ## Evaluation
 Par équipe de 3, vous devez vous procurer une base de données industrielle et appliquer
 judicieusement les méthodes de fouille de données vues en classe.  

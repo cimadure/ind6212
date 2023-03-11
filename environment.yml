@@ -1,0 +1,22 @@
+name: ind6212
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pyts
+  - scikit-learn[version='>=1.2.2']
+  - pyquicksetup
+  - pip
+  - geopandas[version='>=0.12']
+  - ipykernel
+  - pyarrow
+  - python=3.9
+  - ipython
+  - contextily
+  - pyquickhelper
+  - seaborn
+  - osmnx
+  - graphviz
+  - jupyter
+  - tqdm
+  - tabulate

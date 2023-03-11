@@ -1,0 +1,4 @@
+
+mlinsights
+#git+https://github.com/sdpython/mlinsights.git
+#git+https://github.com/cimadure/mlinsights.git
