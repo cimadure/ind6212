@@ -44,3 +44,19 @@ Respect des lignes directrices	 Format : GeoJSON
  Considérations fichiers : Conforme ou non-applicable
  Considérations données : Conforme ou non-applicable
 Identifiant	e18bfd07-edc8-4ce8-8a5a-3b617662a794
+
+
+
+https://donnees.montreal.ca/ville-de-montreal/arros-liste
+Méthodologie
+Uniformisation des intitulés, libellés, identificateurs et autres des arrondissements.
+
+Attributs (Descriptions):
+
+Nom officiel: Nom officiel avec tiret, tiret long et apostrophe française. Utilisé pour l’intitulé
+Nom abrégé: Nom abrégé à lettres majuscules et tirets. Utilisé comme jeton - Acronyme: Acronyme à lettres majuscules et à longueur variable. Utilisé comme jeton
+Code3L: Acronyme à 3 lettres majuscules. Utilisé dans les schémas de données géospatiales
+ID-uadm: Identifiant numérique à deux digits correspondant au code budgétaire de l’unité administrative
+No-arro-election: Identifiant numérique (01-19) utilisé par Élection Montréal
+Code REM: Code géographique* associé à l’identification de l’arrondissement selon le MAMH
+*Le code de la Ville de Montréal étant: 66023
