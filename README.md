@@ -1,18 +1,41 @@
 # Polytechnique Montréal - IND6212 - H23
+
 Data Mining School Project
 
 ## Problématique
+
 Français:  
+
 * Par Quartiers similaires, quelle est la meilleure stratégie à adopter?  
 (si on à du temps, descendre au niveau des secteurs [nettroyage des faux contrats])
-    * nombre de trajets, unités utilisées / volume, temps, temps déneigement par fenetre temporelle de neige tombée
+* nombre de trajets, unités utilisées / volume, temps, temps déneigement par fenetre temporelle de neige tombée
 
 Anglais:
+
 * Per similar neigorhood, what would be the best snow removal strategy?  
 (if we have time, go to sector hierarchy )
 
+## TO-DO
+
+When possible consider the area to normalize data
+
+ 0. [ ] table: row:year, columns: #transactions, #transactions/TypeTransaction| #unique secteur, | #depots, #depots/strategy,| #contrats  
+  {columns level 0: source (transaction|secteur|contract|...)}
+ 0. [ ] table: probably a truncate table of ABBREVIATION and Arrondissement name 
+ 0. [ ] graph: database schema (links between data files)
+ 0. [ ] graph: x:week; y1:total volume/area ;y2:total snowfall(cm) {from weather}; hue:strategy    {y2 can be made later on}
+ 0. [ ] table: row:year, column: strategy, value: total volume ?! or [graph (horizontal stacked bars, with volume value inside the bar)](https://docs.bokeh.org/en/latest/docs/examples/topics/hierarchical/crosstab.html) 
+ 0. [ ] graph: Scatter plot; xy:clustering space; size=volume/area; label=arrondissement; hue:cluster; marker=strategy with best total volume 
+     {will help us choose the best data manifold}
+ 0. [ ] map: arrondissement; color: number of sectors; mark: depot location; annotation=arrondissement  {color: heatmap gradiant}
+ 0. [ ] map: arrondissement; color: best strategy over years; annotation=arrondissement
+ 0. [ ] figure: data transformation pipeline
+
+
 ## Back-Up Ideas
+
 ### Français:
+
 1. Dépendament du débit de chute de neige, quelle est la meilleur stratégie par quartier?
 1. Quels sont les caractéristiques des meilleurs contracteurs selection par strategie et par secteur ?
 1. Les secteurs qui se ressemblent ?
@@ -21,6 +44,7 @@ Anglais:
 1. Nombre de strategies de déneigement ?
 
 ### Anglais:
+
 1. Depend on the snow 'debit' , what best strategy per neighborhoods ?
 1. What are the attributes of the best contractors per strategy per sector? 
 1. Which sectors are similar?
@@ -30,6 +54,7 @@ Anglais:
 
 
 ## Data
+
 * [Depots](data/depot/readme.md)
 * [Contrats](data/contrat/readme.md)
 * [Transactions](data/transaction/readme.md)
@@ -37,7 +62,9 @@ Anglais:
 * [Secteur](data/secteur/readme.md)
 
 ---
+
 ## Setup
+
 In the Terminal, having installed Anaconda, execute the following lines.  
 Create the environment:
 > conda env create --file environment.yml  
@@ -52,6 +79,7 @@ Launch the notebook to start working:
 
 
 ## Knowledge
+
 - Geospacial
   * https://geopandas.org/en/stable/gallery/choropleths.html
   * https://geopandas.org/en/stable/gallery/polygon_plotting_with_folium.html
