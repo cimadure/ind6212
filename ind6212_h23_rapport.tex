@@ -4,6 +4,24 @@
 \usepackage{mathptmx} % Times-New Roman Like
 \usepackage{biblatex}
 
+% difffferent style for pandas.styler.to_latex()
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{siunitx}
+\usepackage{longtable}
+\usepackage{hyperref}
+
+\usepackage{wrapfig} % wrapping 
+
+
+\usepackage{svg}
+
+
+\usepackage{pdflscape} % with pdfLatex or LuaLatex
+%\usepackage{lscape} % lscape.sty Produce landscape pages in a (mainly) portrait document.
+\usepackage{rotating}
+
 %Set the font (output) encoding
 %--------------------------------------
 \usepackage[T1]{fontenc} %Not needed by LuaLaTeX or XeLaTeX
@@ -16,6 +34,9 @@
 %Hyphenation rules
 %--------------------------------------
 \usepackage{hyphenat}
+
+\graphicspath{{media/}} % Specifies where to look for included images (trailing slash required)
+
 
  \geometry{
 letterpaper,
@@ -43,17 +64,82 @@ letterpaper,
 - source des données \\
 Je cite cette source \cite{example-article}\\
 \subsection{description des données (taille, format)}
-\subsection{préparation des données}
 
-Choix des outils vs problématique
-Formatage des données vs outil
-Choix et justification des paramêtres outil
+%[!htbp]
+
+\begin{wrapfigure}{r}{0.75\textwidth}
+    \includegraphics[width=1\linewidth]{media/nombre_de_secteurs_par_arrondissement.png} 
+    \caption{Caption1}
+    \label{fig:nspa}
+\end{wrapfigure}
+
+\subsection{Préparation des données}
+
+
+
+
+- Choix des outils vs problématique  
+- Formatage des données vs outil  
+- Choix et justification des paramêtres outil  
+
+
+\begin{wrapfigure}{c}{0.5\textwidth}
+    \includegraphics[width=1.0 \linewidth]{media/edited/pipeline.png} 
+    \caption{Captijkjon1}
+    \label{fig:pipeline}
+\end{wrapfigure}
 
 \blindtext[3]
-\section{Analyse des Resultats}
-\blindtext[6]
+
+
+
+\begin{figure}
+    \includesvg[width=1\linewidth]{media/abbreviation_arrondissement.svg} 
+    \caption{Caption2}
+    \label{fig:arr}
+\end{figure}
+
+\begin{wraptable}{l}{10cm}
+    \input{media/arrondissement_feature_2.tex}
+    \caption{arr feat 2}
+    \label{tab:arrft2}
+
+\end{wraptable}
+
+
+\begin{landscape}
+
+    \section{Analyse des Resultats}
+
+    \blindtext[6]
+    \begin{table}
+        \let\center\empty
+        \let\endcenter\relax
+        \centering
+        \resizebox{.6\width}{!}{\input{media/arrondissement_feature_1.tex}}
+    \end{table} 
+
+    \begin{wraptable}{l}{1.0\textwidth}
+        \input{media/arrondissement_feature_1.tex}
+        \caption{arr feat 2}
+        \label{tab:arrft1}
+    \end{wraptable} 
+
+
+\end{landscape}
+
+
+
+\begin{figure}
+    \includegraphics[width=1\linewidth]{media/clustering_4.png} 
+    \caption{Caption2}
+    \label{fig:clust}
+\end{figure}
+
 \section{Discussion}
 \subsection{Critique des résultats vs outils / paramètres}
+
+
 \subsection{Critique des résultats vs problématique}
 \blindtext[3]
 \section{Conclusion}
