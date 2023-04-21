@@ -4,6 +4,7 @@ from sklearn.base import BaseEstimator, TransformerMixin, clone
 from sklearn.utils.metaestimators import available_if
 from sklearn.utils.validation import check_is_fitted
 from sklearn.cluster import KMeans
+import numpy as np
 
 def generate_source_filename(name=None, year=2017):
     if name == 'depot': 
@@ -66,6 +67,11 @@ class InductiveClusterer(BaseEstimator):
         check_is_fitted(self)
         return self.classifier_.decision_function(X)
 
+    @available_if(_classifier_has("score"))
+    def score(self, X, y=None):
+        check_is_fitted(self)
+        return self.classifier_.score(X,y)       
+
 
 class KMeansTransformer(BaseEstimator, TransformerMixin):
 
@@ -73,6 +79,8 @@ class KMeansTransformer(BaseEstimator, TransformerMixin):
         # The purpose of 'self.model' is to contain the
         # underlying cluster model-
         self.model = KMeans(**kwargs)
+        #super(KMeansTransformer, self).__init__(**kwargs)
+        #super().__init__(**kwargs)
         
 
     def fit(self, X):
