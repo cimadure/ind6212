@@ -5,6 +5,8 @@ from sklearn.utils.metaestimators import available_if
 from sklearn.utils.validation import check_is_fitted
 from sklearn.cluster import KMeans
 import numpy as np
+import pandas as pd
+
 
 def generate_source_filename(name=None, year=2017):
     if name == 'depot': 
@@ -96,3 +98,24 @@ class KMeansTransformer(BaseEstimator, TransformerMixin):
     def fit_transform(self, X, y=None):
         self.fit(X)
         return self.transform(X)    
+        
+
+
+
+        
+def year_month_date_to_string(date):
+    return date.strftime('%Y%m')
+
+def resample(df, index):
+    d = df.set_index(index)
+    return d.resample('1T', kind='timestamp').bfill()
+
+def datetime_attributes(df, column, attribute=['year', 'month', 'day', 'hour', 'dayofyear', 'quarter']):
+    # define generator expression of series, one for each attribute
+    date_gen = (getattr(df[column].dt, i).rename(i) for i in attribute)
+    return pd.concat(date_gen, axis=1)
+
+def datetime_isocalendar(df, column, attribute=['year','week', 'weekday']):
+    date_gen =  df.apply(lambda x: x[column].isocalendar(), axis=1, result_type='expand')
+    return date_gen.rename(columns= dict((i,j) for i,j in enumerate(attribute)) )
+       
