@@ -8,6 +8,8 @@ import numpy as np
 import pandas as pd
 
 
+from docx import Document
+
 def generate_source_filename(name=None, year=2017):
     if name == 'depot': 
         return 'depots_deneigement_saison_{s}-{e}.csv'.format(s=year,e=year+1)
@@ -119,3 +121,22 @@ def datetime_isocalendar(df, column, attribute=['year','week', 'weekday']):
     date_gen =  df.apply(lambda x: x[column].isocalendar(), axis=1, result_type='expand')
     return date_gen.rename(columns= dict((i,j) for i,j in enumerate(attribute)) )
        
+
+
+
+def doc_table(doc, tab):
+    # add a table to the end and create a reference variable
+    # extra row is so we can add the header row
+    t = doc.add_table(tab.shape[0]+1, tab.shape[1]+1)
+    #t.style = 'LightShading-Accent1'
+    # add the header rows.
+    t.cell(0,0).text = 'index'
+    for j in range(tab.shape[-1]):
+        t.cell(0,j+1).text = str(tab.columns[j])
+    # add the rest of the data frame
+    for i in range(tab.shape[0]):
+        print(i)
+        r = tab.index[i]
+        t.cell(i+1,0).text = str(r)
+        for j in range(tab.shape[-1]):
+            t.cell(i+1,j+1).text = str(tab.values[i,j])
