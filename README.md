@@ -2,6 +2,9 @@
 
 Data Mining School Project
 
+dataset located at https://huggingface.co/datasets/cimadure/snow_removal_transactions_in_montreal
+move those data in data folder.
+
 ## Problématique
 
 Français:  
